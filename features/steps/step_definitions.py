@@ -6,14 +6,6 @@ from src.is_it_friday import is_it_friday
 def step_given_today_is(context, day):
     context.today = day
 
-#@given('today is Friday')
-#def step_given_today_is(context):
- #   context.today = "Friday"
-
-#@given('today is Monday')
-#def step_given_today_is(context):
- #   context.today = "Monday"
-
 @when("I ask whether it's Friday yet")
 def step_when_i_ask_whether_its_friday_yet(context):
     context.actual_answer = is_it_friday(context.today)
